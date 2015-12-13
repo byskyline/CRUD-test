@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :events
+
   get "/welcome/say_hello" => "welcome#say"
   get "welcome" => "welcome#index"
 
@@ -57,6 +59,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  match ':controller(/:action(/:id(.:format)))', :via => :all
+match ':controller(/:action(/:id(.:format)))', :via => :all
 end
