@@ -1,0 +1,22 @@
+<% if @event.errors.any? %>
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+<% end %>
+
+
+
+<p>
+    <%= f.label :bookname, "書名" %>
+    <%= f.text_area :bookname %>
+</p>
+<p>
+    <%= f.label :name, "作者" %>
+    <%= f.text_field :name %>
+</p>
+<p>
+    <%= f.label :price, "價格" %>
+    <%= f.text_field :price %>
+</p>

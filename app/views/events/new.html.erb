@@ -1,14 +1,6 @@
 <%= form_for @event, :url => { :controller => 'events', :action => 'create' } do |f| %>
 
-    <%= f.label :bookname, "書名" %>
-    <%= f.text_area :bookname %>
-
-    <%= f.label :name, "作者" %>
-    <%= f.text_field :name %>
-
-
-    <%= f.label :price, "價格" %>
-    <%= f.text_field :price %>
+    <%= render :partial => "form", :locals => { :f => f } %>
 
     <%= f.submit "Create" %>
 <% end %>
